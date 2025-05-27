@@ -1,0 +1,104 @@
+body {
+  background-color: powderblue;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.school-name {
+  color: rgb(210, 210, 228);
+  border: 2px solid blue;
+   background-color: darkblue;
+}
+
+.motto {
+  color: red;
+  font-weight: bold;
+   font-size: 1.1em;
+  
+}
+
+h2  {
+  color: red;
+  font-weight: bold;
+    font-size: 2.1em;
+  
+}
+
+form table {
+  border-collapse: separate;
+  border-spacing: 20px 15px;
+  width: 100%;
+  table-layout: fixed;
+  max-width: 1000px;
+  margin: 1 auto;
+  text-align: left;
+}
+
+form table td {
+  vertical-align: top; /* keep input aligned nicely */
+    width: 33%;
+}
+
+.application-form {
+  text-align: left;
+  max-width: 800px;
+  margin: 1 auto;
+}
+
+.application-form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto; /* centers the button with margin top */
+}
+.submit-row {
+  text-align: center;
+}
+
+
+
+.course-list {
+  max-width: 600px;
+  margin: 1 auto;
+  text-align: left;
+}
+
+.news-section {
+  text-align: left;
+  max-width: 800px;
+  margin: 1 auto;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border: 2px solid blue;
+  background-color: yellow;
+}
+
+.navigation li {
+  display: inline;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 16px;
+  display: block;
+}
+
+.navigation a:hover {
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.welcome-text {
+  color: black;
+  font-size: 1.5.1em;
+}
+
+footer {
+  margin-top: 20px;
+}

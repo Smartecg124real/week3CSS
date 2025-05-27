@@ -1,103 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Musa Iliasu College - Home</title>
+  <title>Musa Iliasu College - Application Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="powderblue">
+<body>
 
-  <h1 align="center" style="color:blue;">Musa Iliasu College</h1>
-  <p align="center"<b><font color="red">Gwarzo Road, P.O.Box 701, Kano-Nigeria</font></b></p>
-  <p align="center"<b><font color="red">Tel: 07035017899</font></b></p>
-  <p align="center"<b><font color="red">Motor: Ilim Da Tarbiya</font></b></p>
+  <h1 class="school-name">Musa Iliasu College</h1>
+  <p class="motto">Gwarzo Road, P.O.Box 701, Kano-Nigeria</p>
+  <p class="motto">Tel: 07035017899</p>
+  <p class="motto">Motto: Ilim Da Tarbiya</p>
 
   <hr>
 
-  
-  <h2 style="color:blue;">Navigation</h2>
-  <table>
-    <tr>
-      <td><a href="index.html">Home</a></td>
-      <td><a href="about.html">About Us</a></td>
-      <td><a href="courses.html">Courses</a></td>
-      <td><a href="admission.html">Admission</a></td>
-      <td><a href="news.html">News</a></td>
-      <td><a href="contact.html">Contact</a></td>
-      <td><a href="form.html">Apply</a></td>
-      
-    </tr>
-  </table>
 
-  
-<hr>
+  <ul class="navigation">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="form.html">Apply</a></li>
+  </ul>
 
-  <h2 id="form">Student Application Form</h2> <hr>
-  
-    <form action="#" method="post">
-    
-     <table>
-     
+  <hr>
 
+  <h2 id="form">Student Application Form</h2>
+  <hr>
+
+  <form action="#" method="post">
+    <table>
       <tr>
-      <td>First Name:<br>
-      <input type="text" name="firstname" required></td>
-      
-      <td>Other Name:<br>
-      <input type="text" name="othername" required></td>
-      
-      <td>Surname Name:<br>
-      <input type="text" name="surname" required></td>
-       </tr>
-      <tr>
-      <td> Email Address:<br>
-      <input type="email" name="email" required></td>
-
-      <td> Phone Number:<br>
-      <input type="tel" name="phone" required></td>
-
-      <td> Home Address:<br>
-      <input type="text" name="address"></td>
-    
-      </tr>
-    
-      <tr>
-   
-      <td> Date of Birth:<br>
-      <input type="date" name="dob" required></td>
-    
-      <td> Place of Birth:<br>
-      <input type="text" name="pob" required></td>
-
-      <td> State of Origin:<br>
-      <input type="text" name="soO" required></td>
-    
-      
-      </tr>
-
-      <tr>
-     
-
-      <td> Gender:<br>
-      <input type="radio" name="gender" value="Male" > Male
-      <input type="radio" name="gender" value="Female"> Female</td>
-      
-       <td>  Preferred Course:<br>
-      <select name="course">
-        <option value="science">Science</option>
-        <option value="arts">Arts</option>
-        <option value="commercial">Commercial</option>
-      </select></td>
-
-       <td> Additional Comments:<br>
-      <textarea name="comments" rows="4" cols="40"></textarea></td>
-      
-      </tr>
-       <tr>
-      <td>Upload Passport:<br>
-      <input type="file" name="passport">
-      </td>
+        <td>First Name:<br><input type="text" name="firstname" required></td>
+        <td>Other Name:<br><input type="text" name="othername" required></td>
+        <td>Surname:<br><input type="text" name="surname" required></td>
       </tr>
       <tr>
-        <td> <br><input type="submit" value="Submit Application">  </tr>
+        <td>Email Address:<br><input type="email" name="email" required></td>
+        <td>Phone Number:<br><input type="tel" name="phone" required></td>
+        <td>Home Address:<br><input type="text" name="address"></td>
+      </tr>
+      <tr>
+        <td>Date of Birth:<br><input type="date" name="dob" required></td>
+        <td>Place of Birth:<br><input type="text" name="pob" required></td>
+        <td>State of Origin:<br><input type="text" name="soO" required></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Gender:<br>
+          <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Preferred Course:<br>
+          <select name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+            <option value="commercial">Commercial</option>
+         
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Additional Comments:<br>
+          <textarea name="comments" rows="4" cols="40"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Upload Passport:<br>
+          <input type="file" name="passport">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="submit-row">
+          <input type="submit" value="Submit Application">
+        </td>
+      </tr>
     </table>
   </form>
- 
+
+</body>
+</html>
