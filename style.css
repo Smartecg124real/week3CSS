@@ -1,84 +1,46 @@
+/* Global styles */
 body {
   background-color: powderblue;
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header styles */
 .school-name {
   color: rgb(210, 210, 228);
   border: 2px solid blue;
-   background-color: darkblue;
+  background-color: darkblue;
+  padding: 10px;
 }
 
 .motto {
   color: red;
   font-weight: bold;
-   font-size: 1.1em;
-  
+  font-size: 1.1em;
+  margin: 4px 0;
 }
 
-h2  {
-  color: red;
-  font-weight: bold;
-    font-size: 2.1em;
-  
-}
-
-form table {
-  border-collapse: separate;
-  border-spacing: 20px 15px;
-  width: 100%;
-  table-layout: fixed;
-  max-width: 1000px;
-  margin: 1 auto;
-  text-align: left;
-}
-
-form table td {
-  vertical-align: top; /* keep input aligned nicely */
-    width: 33%;
-}
-
-.application-form {
-  text-align: left;
-  max-width: 800px;
-  margin: 1 auto;
-}
-
-.application-form input[type="submit"] {
-  display: block;
-  margin: 20px auto 0 auto; /* centers the button with margin top */
-}
-.submit-row {
-  text-align: center;
-}
-
-
-
-.course-list {
-  max-width: 600px;
-  margin: 1 auto;
-  text-align: left;
-}
-
-.news-section {
-  text-align: left;
-  max-width: 800px;
-  margin: 1 auto;
-}
-
+/* Navigation using Flexbox */
 .navigation {
+ 
   list-style-type: none;
-  padding: 0;
+ 
+  padding: 10;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  justify-content: center; /* Centers items horizontally */
   gap: 15px;
   border: 2px solid blue;
   background-color: yellow;
 }
 
 .navigation li {
+  color: white;
+      text-decoration: none;
+      font-weight: bold;
   display: inline;
 }
 
@@ -94,11 +56,133 @@ form table td {
   border-radius: 5px;
 }
 
-.welcome-text {
-  color: black;
-  font-size: 1.5.1em;
+/* Section headings */
+h2 {
+  color: red;
+  font-weight: bold;
+  font-size: 2.1em;
 }
 
+/* Main content using CSS Grid */
+main {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 20px;
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 2px solid darkblue;
+  border-radius: 10px;
+}
+
+.sidebar img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Main content block */
+.main-content {
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Welcome text */
+.welcome-text {
+  color: black;
+  font-size: 1.5em;
+}
+
+/* Footer */
 footer {
   margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Form and table styling */
+form table {
+  border-collapse: separate;
+  border-spacing: 20px 15px;
+  width: 100%;
+  table-layout: fixed;
+  max-width: 1000px;
+  margin: 1 auto;
+  text-align: left;
+}
+
+form table td {
+  vertical-align: top;
+  width: 33%;
+}
+
+.application-form {
+  text-align: left;
+  max-width: 800px;
+  margin: 1 auto;
+}
+
+.application-form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.submit-row {
+  text-align: center;
+}
+
+.course-list {
+  max-width: 600px;
+  margin: 1 auto;
+  text-align: left;
+}
+
+.news-section {
+  text-align: left;
+  max-width: 800px;
+  margin: 1 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Stack navigation vertically on small screens */
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Stack sidebar and main content vertically */
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Two-column layout: sidebar and main content */
+  main {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    text-align: left;
+  }
 }

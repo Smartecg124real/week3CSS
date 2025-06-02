@@ -1,18 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Musa Iliasu College - Application Form</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+
+    form {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .submit-row {
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      background-color: #004080;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0066cc;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
 
   <h1 class="school-name">Musa Iliasu College</h1>
   <p class="motto">Gwarzo Road, P.O.Box 701, Kano-Nigeria</p>
-  <p class="motto">Tel: 07035017899</p>
+  <p class="motto">Tel: +234 703 501 7899</p>
   <p class="motto">Motto: Ilim Da Tarbiya</p>
-
-  <hr>
-
 
   <ul class="navigation">
     <li><a href="index.html">Home</a></li>
@@ -24,57 +86,80 @@
     <li><a href="form.html">Apply</a></li>
   </ul>
 
-  <hr>
+  <h2>Student Application Form</h2>
 
-  <h2 id="form">Student Application Form</h2>
-  <hr>
-
-  <form action="#" method="post">
+  <form action="#" method="post" enctype="multipart/form-data">
     <table>
       <tr>
-        <td>First Name:<br><input type="text" name="firstname" required></td>
-        <td>Other Name:<br><input type="text" name="othername" required></td>
-        <td>Surname:<br><input type="text" name="surname" required></td>
+        <td>
+          <label for="firstname">First Name:</label><br>
+          <input type="text" name="firstname" id="firstname" required>
+        </td>
+        <td>
+          <label for="othername">Other Name:</label><br>
+          <input type="text" name="othername" id="othername" required>
+        </td>
+        <td>
+          <label for="surname">Surname:</label><br>
+          <input type="text" name="surname" id="surname" required>
+        </td>
       </tr>
       <tr>
-        <td>Email Address:<br><input type="email" name="email" required></td>
-        <td>Phone Number:<br><input type="tel" name="phone" required></td>
-        <td>Home Address:<br><input type="text" name="address"></td>
+        <td>
+          <label for="email">Email Address:</label><br>
+          <input type="email" name="email" id="email" required>
+        </td>
+        <td>
+          <label for="phone">Phone Number:</label><br>
+          <input type="tel" name="phone" id="phone" required>
+        </td>
+        <td>
+          <label for="address">Home Address:</label><br>
+          <input type="text" name="address" id="address">
+        </td>
       </tr>
       <tr>
-        <td>Date of Birth:<br><input type="date" name="dob" required></td>
-        <td>Place of Birth:<br><input type="text" name="pob" required></td>
-        <td>State of Origin:<br><input type="text" name="soO" required></td>
-      </tr>
-      <tr>
-        <td colspan="3">
-          Gender:<br>
-          <input type="radio" name="gender" value="Male"> Male
-          <input type="radio" name="gender" value="Female"> Female
+        <td>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" name="dob" id="dob" required>
+        </td>
+        <td>
+          <label for="pob">Place of Birth:</label><br>
+          <input type="text" name="pob" id="pob" required>
+        </td>
+        <td>
+          <label for="soO">State of Origin:</label><br>
+          <input type="text" name="soO" id="soO" required>
         </td>
       </tr>
       <tr>
         <td colspan="3">
-          Preferred Course:<br>
-          <select name="course" required>
+          <label>Gender:</label><br>
+          <input type="radio" name="gender" value="Male" id="male"> <label for="male">Male</label>
+          <input type="radio" name="gender" value="Female" id="female"> <label for="female">Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <label for="course">Preferred Course:</label><br>
+          <select name="course" id="course" required>
             <option value="">--Select Course--</option>
             <option value="science">Science</option>
             <option value="arts">Arts</option>
             <option value="commercial">Commercial</option>
-         
           </select>
         </td>
       </tr>
       <tr>
         <td colspan="3">
-          Additional Comments:<br>
-          <textarea name="comments" rows="4" cols="40"></textarea>
+          <label for="comments">Additional Comments:</label><br>
+          <textarea name="comments" id="comments" rows="4" placeholder="Tell us anything relevant..."></textarea>
         </td>
       </tr>
       <tr>
         <td colspan="3">
-          Upload Passport:<br>
-          <input type="file" name="passport">
+          <label for="passport">Upload Passport Photograph:</label><br>
+          <input type="file" name="passport" id="passport" accept="image/*">
         </td>
       </tr>
       <tr>
@@ -84,6 +169,10 @@
       </tr>
     </table>
   </form>
+
+  <footer>
+    <p>&copy; 2025 Musa Iliasu College. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
